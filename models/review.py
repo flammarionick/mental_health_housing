@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Review model for the platform."""
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey
 
 class Review(BaseModel, Base):
     """Review class for housing feedback."""

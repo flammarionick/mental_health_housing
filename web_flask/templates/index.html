@@ -1,10 +1,40 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Housing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div id="header_logo"></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">List Your Property</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
 
-{% block content %}
-<div id="app">
-    <h2>Welcome to Mental Health Housing</h2>
-    <p>This platform helps you find housing for mental health risk patients, Alzheimer's patients, and the elderly in the UK.</p>
-    <button onclick="loadHousing()">Load Housing Listings</button>
-    <div id="housing-listings"></div>
-</div>
-{% endblock %}
+    <main>
+        <section id="hero">
+            <h1>Welcome to Mental Health Housing</h1>
+            <p>This platform helps you find housing for mental health risk patients, Alzheimer's patients, and the elderly in the UK.</p>
+            <button onclick="loadHousing()">Load Housing Listings</button>
+        </section>
+
+        <section id="housing-listings">
+            <h2>Housing Listings</h2>
+            <div id="listings"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mental Health Housing</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
